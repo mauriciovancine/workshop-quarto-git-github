@@ -6,8 +6,8 @@
 <script src="slides_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="slides_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="slides_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="slides_files/libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.25">
+<link href="slides_files/libs/quarto-html/quarto-syntax-highlighting-c6982bbdd90c704a9b15aa23d87ad911.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.2">
 
   <meta name="author" content="Maurício Vancine">
   <title>Reprodutibilidade em R e GitHub</title>
@@ -219,6 +219,17 @@
 <li><code>Quarto</code> e GitHub</li>
 <li>Web applications (apps): <code>Shiny</code></li>
 </ul>
+</section>
+<section class="slide level2">
+<h2>Repositório do GitHub</h2>
+<p><br></p>
+<p><a href="https://github.com/mauriciovancine/workshop-quarto-git-github">https://github.com/mauriciovancine/workshop-quarto-git-github</a></p>
+<center>
+<img src="img/github_logo2.png" style="width:60%">
+</center>
+<div class="footer">
+<p><a href="https://github.com/mauriciovancine/workshop-quarto-git-github">workshop-quarto-git-github</a></p>
+</div>
 </section>
 <section class="slide level2">
 <h2>Reprodutibilidade</h2>
@@ -1109,19 +1120,21 @@
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href=""></a><span class="co"># bibliotecas</span></span>
 <span id="cb4-2"><a href=""></a><span class="fu">.libPaths</span>()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "C:/Users/mauri/AppData/Local/R/win-library/4.5"
-[2] "C:/Program Files/R/R-4.5.1/library"            </code></pre>
+<pre><code>[1] "/home/mude/R/x86_64-pc-linux-gnu-library/4.5"
+[2] "/usr/local/lib/R/site-library"               
+[3] "/usr/lib/R/site-library"                     
+[4] "/usr/lib/R/library"                          </code></pre>
 </div>
 </div>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href=""></a><span class="co"># pacotes</span></span>
 <span id="cb6-2"><a href=""></a><span class="fu">find.package</span>(<span class="st">"base"</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "C:/PROGRA~1/R/R-45~1.1/library/base"</code></pre>
+<pre><code>[1] "/usr/lib/R/library/base"</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href=""></a><span class="fu">find.package</span>(<span class="st">"renv"</span>)</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "C:/Users/mauri/AppData/Local/R/win-library/4.5/renv"</code></pre>
+<pre><code>[1] "/home/mude/R/x86_64-pc-linux-gnu-library/4.5/renv"</code></pre>
 </div>
 </div>
 </section></section>
@@ -2103,80 +2116,42 @@
       });
     </script>
     
-
     <script>
-
       // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-
       // slide changes (different for each slide format).
-
       (function () {
-
         // dispatch for htmlwidgets
-
         function fireSlideEnter() {
-
           const event = window.document.createEvent("Event");
-
           event.initEvent("slideenter", true, true);
-
           window.document.dispatchEvent(event);
-
         }
-
-    
 
         function fireSlideChanged(previousSlide, currentSlide) {
-
           fireSlideEnter();
 
-    
-
           // dispatch for shiny
-
           if (window.jQuery) {
-
             if (previousSlide) {
-
               window.jQuery(previousSlide).trigger("hidden");
-
             }
-
             if (currentSlide) {
-
               window.jQuery(currentSlide).trigger("shown");
-
             }
-
           }
-
         }
-
-    
 
         // hookup for slidy
-
         if (window.w3c_slidy) {
-
           window.w3c_slidy.add_observer(function (slide_num) {
-
             // slide_num starts at position 1
-
             fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-
           });
-
         }
 
-    
-
       })();
-
     </script>
-
-    
 
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {

@@ -33,6 +33,20 @@ lang: pt-br
 - `Quarto` e GitHub
 - Web applications (apps): `Shiny`
 
+## Repositório do GitHub
+
+<br>
+
+[https://github.com/mauriciovancine/workshop-quarto-git-github](https://github.com/mauriciovancine/workshop-quarto-git-github)
+
+<center>
+<img src="img/github_logo2.png" style="width:60%"/>
+</center>
+
+::: footer
+[workshop-quarto-git-github](https://github.com/mauriciovancine/workshop-quarto-git-github)
+:::
+
 ## Reprodutibilidade
 
 Capacidade de **recriar uma análise** e **obter os mesmos resultados** com os mesmos dados e códigos
@@ -42,7 +56,6 @@ Capacidade de **recriar uma análise** e **obter os mesmos resultados** com os m
 ::: footer
 [Mendes-Da-Silva (2023)](https://doi.org/10.1590/S0034-759020230408)
 :::
-
 
 ## Reprodutibilidade
 
@@ -96,7 +109,6 @@ Capacidade de **recriar uma análise** e **obter os mesmos resultados** com os m
 ::: footer
 [Foundations of data analysis with R](https://thegraphcourses.org/courses/r-foundations-beta/topics/rstudio-projects/)
 :::
-
 
 ## Organização do projeto
 
