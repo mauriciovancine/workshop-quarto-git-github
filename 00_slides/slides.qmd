@@ -12,6 +12,7 @@ format:
     hash-type: number
     preview-links: false
     chalkboard: true
+    include-after-body: script_blank.html
     logo: "https://www.r-project.org/logo/Rlogo.svg"
     execute:
       echo: true
@@ -27,11 +28,10 @@ lang: pt-br
 <br>
 
 - Reprodutibilidade
-- git e GitHub
+- Controle de versão: git e GitHub
 - Ambiente reprodutível: `renv`
 - Documentos dinâmicos: `Quarto`
-- `Quarto` e GitHub
-- Web applications (apps): `Shiny`
+- Aplicações web (apps): `Shiny`
 
 ## Repositório do GitHub
 
@@ -91,7 +91,7 @@ Capacidade de **recriar uma análise** e **obter os mesmos resultados** com os m
    - Web applications (apps) `Shiny` para interação on-line
 :::
 
-# Organização do projeto
+# 1. Organização do projeto
 
 ## Organização do projeto
 
@@ -130,36 +130,7 @@ Capacidade de **recriar uma análise** e **obter os mesmos resultados** com os m
 [Boas Práticas e Ferramentas da Ciência Aberta na Ecologia - BIE5798](https://gabrielnakamura.github.io/USP_reproducibility_BIE5798/index.html)
 :::
 
-# Conferindo os computadores
-
-# 
-![](img/general_hard_soft.png){fig-align='center'}
-
-:::footer
-[Café com Código](https://www.instagram.com/cafecomcodigo/?hl=pt)
-:::
-
-## Conferindo os computadores
-
-<br>
-**R (>4.5.x)**  
-[https://www.r-project.org](https://www.r-project.org/)
-
-<br>
-
-**RStudio (>2025.9.x)**  
-[https://www.rstudio.com](https://www.rstudio.com/)
-
-<br>
-
-**git (>2.34.x)**  
-[https://git-scm.com](https://git-scm.com/)
-
-![](img/r_logo.svg){.absolute width=20% right=150 top=100}
-![](img/rstudio_logo.svg){.absolute width=35% right=50 top=300}
-![](img/git_logo.png){.absolute width=30% right=100 top=470}
-
-# Controle de versão
+# 2. Controle de versão
 
 # 
 ![](img/git_work.png){fig-align='center'}
@@ -249,15 +220,6 @@ Cada vez mais **necessário** em colaborações
 :::footer
 [kernel](https://www.kernel.org/), [Começando - Uma Breve História do Git](https://git-scm.com/book/pt-br/v2/Come%C3%A7ando-Uma-Breve-Hist%C3%B3ria-do-Git#:~:text=Desde%20seu%20nascimento%20em%202005,%2Dgit%2Dbranching%5D)
 :::
-
-## git e GitHub
-
-**git**
-
-<p align="center">
-<iframe width="80%" height="480" align="center" src="https://www.youtube.com/embed/6Czd1Yetaac" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-</iframe>
-</p>
 
 ## git e GitHub
 
@@ -413,105 +375,6 @@ Cada vez mais **necessário** em colaborações
 
 ![](img/github_criar_repositorio02.png){.absolute width=60% right=-30 top=120}
 
-# Configurações: RStudio, git, GitHub 
-
-## Configurações
-
-**RStudio**
-
-![](img/rstudio.png){fig-align='center'}
-
-## Configurações
-
-**RStudio**
-
-::: {style="font-size: 80%;"}
-- `Tools > Global Options > Git/SVN`
-:::
-
-![](img/rstudio_git_config01.png){.absolute width=80% right=0 top=200}
-
-## Configurações
-
-**RStudio**
-
-::: {style="font-size: 80%;"}
-- Marque **Enable version control interface...**
-- **Git executable**:
-:::
-
-::: {style="font-size: 65%;"}
-- Windows: `C:/Program Files/Git/bin/git.exe`
-- Ubuntu: `/usr/bin/git`
-- Mac: `/usr/bin/git`
-:::
-
-![](img/rstudio_git_config02.png){.absolute width=50% right=-100 top=180}
-
-## Configurações
-
-**RStudio**
-
-Chave SSH
-
-::: {style="font-size: 80%;"}
-1. Create SSH key (ED25519) (talvez RSA?)
-1. View public key
-1. Copiar: Ctrl + C
-:::
-
-![](img/rstudio_git_config03.jpg){.absolute width=50% right=-100 top=180}
-![](img/github_brave.jpg){.absolute width=45% right=500 top=400}
-![](img/general_key.png){.absolute width=13% right=800 top=500}
-
-## Configurações
-
-**GitHub**
-
-::: {style="font-size: 80%;"}
-- **Add chave SSH**: `Perfil > Settings > SSH and GPG keys > New SSH key`
-:::
-
-![](img/github_ssh_key.png){fig-align='center'}
-
-::: footer
-[Add ao GitHub](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
-:::
-
-## Configurações
-
-**GitHub**
-
-::: {style="font-size: 80%;"}
-- Title: um nome qualquer (eu add por nome de PC ou notebook)
-- Key: colar (`ctrl + v`)
-- Add SSH key
-:::
-
-![](img/github_ssh_key_add.png){.absolute width=85% right=-200 top=230}
-
-::: footer
-[Add ao GitHub](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
-:::
-
-## Configurações
-
-**git**
-
-::: {style="font-size: 80%;"}
-- `git config`: definir as configurações de usuário do git
-- Terminal (colar com `ctrl + shift + v`)
-:::
-
-```{r eval=FALSE}
-$ git config --list
-$ git config --global user.name "meu nome"
-$ git config --global user.email "email@dominio.com"
-$ git config --list
-```
-
-![](img/git_config.png){fig-align='center'}
-
 # Controle de versão na prática
 
 ## Controle de versão na prática
@@ -583,21 +446,6 @@ $ git config --list
 [Git 03: Git Clone - Work Locally On Your Computer](https://www.neonscience.org/resources/learning-hub/tutorials/github-git-clone)
 :::
 
-## Iniciando remotamente
-
-Primeiro, vamos **criar uma pasta** chamada `github`
-
-<br>
-
-```{r eval=FALSE}
-".                               # raiz"
-"    ├── home/                   # home"
-"        ├── data/               # dados" 
-"            ├── github/         # todos os repositorios"
-```
-
-![](img/diretorio.png){.absolute width=100% right=30 top=400}
-
 # Há várias formas de se fazer um clone de um repositório
 
 ## Iniciando remotamente
@@ -645,28 +493,6 @@ Escolher **clonar repositório** do GitHub
 `Git`
 
 ![](img/rstudio_git_create02.png){.absolute width=100% right=20 top=210}
-
-## Iniciando remotamente
-
-Preencher com dados do repositório do **GitHub**
-
-`Repository URL` 
-
-![](img/rstudio_git_create03.png){.absolute width=100% right=20 top=210}
-
-## Iniciando remotamente
-
-Preencher:
-
-::: {style="font-size: 80%;"}
-- Repository URL: `git@github.com:mauriciovancine/teste.git`
-- Project directory name: `preenchimento automático`
-- Create project as subdirectory of: `/home/mude/data/github`
-- Se uma janela aparecer, basta digitar "yes"
-- Aguardar o download
-:::
-
-![](img/git_clone_rstudio.png){.absolute width=40% right=100 top=380}
 
 # Versionamento
 
@@ -928,7 +754,7 @@ Agradecimento à [Beatriz Milz](https://beatrizmilz.com/) pelas figuras ~~surrup
 #
 ![](img/general_superior_recreio.jpeg){fig-align='center'}
 
-# Gerenciamento de dependências
+# 3. Gerenciamento de dependências
 
 ## Pacotes no R
 
@@ -1084,6 +910,8 @@ library(renv)
 
 **Fluxo de uso**
 
+<br>
+
 :::: {.columns}
 ::: {.column width=60%}
 ```{r eval=FALSE}
@@ -1135,7 +963,7 @@ renv::restore()
 - Adicione `renv/` ao `.gitignore`
 - Versionar somento o `renv.lock`
 
-# Documentação no R
+# 4. Documentação clara
 
 ## Documentação no R
 
@@ -1729,6 +1557,8 @@ Podemos hospedar gratuitamente as saídas do `Quarto` de forma on-line no GitHub
 ::: footer
 [GitHub pages](https://github.com/course-intror/course-intror.github.io/settings/pages)
 :::
+
+# 5. Automação e repetição
 
 ## Shiny
 
