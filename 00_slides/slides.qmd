@@ -33,6 +33,10 @@ lang: pt-br
 - Documentos dinâmicos: `Quarto`
 - Aplicações web (apps): `Shiny`
 
+![](img/github_logo.png){.absolute width=30% right=100 top=100}
+![](img/package_renv.svg){.absolute width=30% right=-180 top=250}
+![](img/package_quarto.png){.absolute width=25% right=140 top=400}
+
 ## Repositório do GitHub
 
 <br>
